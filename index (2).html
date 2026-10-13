@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BalitaKu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Balitaku.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- Menu samping (laptop/PC) — diisi oleh script.js -->
+  <aside class="sidebar" aria-label="Menu utama">
+    <div class="brand">
+      <i><svg viewBox="0 0 24 24" stroke-width="1" stroke-linejoin="round"><path d="M12 20.5s-7-4.35-7-10.2A4.3 4.3 0 0 1 9.3 6c1.2 0 2.2.5 2.7 1.4.5-.9 1.5-1.4 2.7-1.4A4.3 4.3 0 0 1 19 10.3c0 5.85-7 10.2-7 10.2z"/></svg></i>
+      <span>BalitaKu</span>
+    </div>
+    <nav class="nav" id="navSide"></nav>
+    <div class="sidebar-bottom">
+      <a href="#" data-act="logout"><svg viewBox="0 0 24 24"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 8l-4 4 4 4M6 12h10"/></svg>Keluar</a>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="top-brand"><i><svg viewBox="0 0 24 24" stroke-width="1" stroke-linejoin="round"><path d="M12 20.5s-7-4.35-7-10.2A4.3 4.3 0 0 1 9.3 6c1.2 0 2.2.5 2.7 1.4.5-.9 1.5-1.4 2.7-1.4A4.3 4.3 0 0 1 19 10.3c0 5.85-7 10.2-7 10.2z"/></svg></i><span>BalitaKu</span></div>
+      <div class="top-title" id="topTitle">Dashboard</div>
+      <div class="right">
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Ganti tema terang/gelap">🌓</button>
+        <div class="user"><span class="av">IK</span><b>Ibu Kasih</b></div>
+      </div>
+    </header>
+
+    <main class="content" id="view" tabindex="-1"></main>
+  </div>
+</div>
+
+<!-- Menu bawah (HP) -->
+<nav class="bottom-nav" id="navBottom" aria-label="Menu utama"></nav>
+
+<!-- Jendela pop-up -->
+<div class="modal" id="modal" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="sh-head"><h2 id="mTitle"></h2><button type="button" class="x" data-act="tutup" aria-label="Tutup">✕</button></div>
+    <div id="mBody"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="Balitaku.js"></script>
+</body>
+</html>
